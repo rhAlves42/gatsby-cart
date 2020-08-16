@@ -1,0 +1,17 @@
+{
+  "presets": ["babel-preset-gatsby", "@babel/preset-env"],
+  "plugins": [
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+    ["module-resolver", {
+      "root": ["."],
+      "alias": {
+        "@modules": "./src/modules",
+        "@components": "./src/components",
+        "@hooks": "./src/hooks",
+        "@utils": "./src/utils",
+        "@images": "./src/images"
+      }
+    }]
+  ]
+}

@@ -1,0 +1,351 @@
+@import '~antd/dist/antd.less';
+
+@desktopLarge: ~'only screen and (min-width: 1366px)';
+@desktop: ~'only screen and (min-width: 1024px)';
+@tablet: ~'only screen and (min-width: 768px)';
+@mobile: ~'only screen and (max-width: 767px)';
+
+.ant-layout {
+  .ant-pro-basicLayout-content {
+    margin: 0 0 168px 0;
+    padding: 0;
+
+    .ant-card {
+      box-shadow: @box-shadow-base;
+      padding: 16px 16px 0 16px;
+
+      .ant-card-head {
+        padding: 0 0 12px 0;
+
+        .ant-card-head-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+
+          .ant-card-head-title {
+            padding: 0;
+            font-size: 24px;
+            font-weight: 600;
+            min-width: 320px;
+          }
+
+          .ant-card-extra {
+            @media @mobile {
+              margin-right: auto;
+              margin-left: 0;
+            }
+          }
+        }
+
+        @media @tablet {
+          padding: 12px 40px;
+        }
+      }
+
+      .ant-card-body {
+        padding: 24px 0 16px 0;
+
+        @media @tablet {
+          padding: 24px 40px 16px 40px;
+
+          .ant-tabs {
+            margin-top: 0;
+          }
+        }
+      }
+
+      @media @tablet {
+        padding: 0;
+      }
+    }
+
+    .ant-pro-table-search {
+      padding: 16px 16px 0 16px;
+      border-radius: 4px;
+      box-shadow: @box-shadow-base;
+
+      .ant-form-item-label {
+        text-align: left;
+      }
+
+      .ant-form {
+        .ant-form-item {
+          .ant-form-item-label {
+            padding: 0;
+          }
+        }
+
+        .ant-row .ant-form-item {
+          flex-direction: column;
+        }
+
+        .ant-row.ant-row-end {
+          margin: 0 !important;
+
+          .ant-col {
+            .ant-row.ant-form-item {
+              margin-bottom: 16px;
+            }
+
+            .ant-form-item-control {
+              @media @mobile {
+                padding: 0 0 16px 0 !important;
+              }
+            }
+
+            .ant-form-item-label {
+              padding: 0;
+            }
+
+            @media @mobile {
+              padding: 0 !important;
+            }
+          }
+        }
+      }
+
+      @media @mobile {
+        height: auto !important;
+      }
+    }
+
+    .ant-pro-table {
+      .ant-card {
+        .ant-pro-table-toolbar {
+          padding: 0;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          position: relative;
+          margin-left: 0;
+
+          .ant-pro-table-toolbar-option {
+            justify-content: flex-end;
+
+            .ant-form-item {
+              margin: 0;
+            }
+
+            @media @tablet {
+              padding-right: 16px;
+            }
+
+            .ant-pro-table-toolbar-default-option {
+              flex: 0;
+
+              @media @tablet {
+                flex: 1;
+              }
+            }
+
+            .ant-pro-table-toolbar-item {
+              h2 {
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 0;
+                max-width: 70%;
+
+                @media @tablet {
+                  left: 1.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .ant-page-header {
+      padding-right: 16px;
+      padding-left: 16px;
+
+      @media @tablet {
+        padding-left: 0;
+        padding-top: 0;
+      }
+    }
+
+    .ant-layout-content {
+      padding: 16px;
+
+      @media @tablet {
+        padding: 40px 40px 16px 40px;
+      }
+    }
+
+    @media @tablet {
+      margin: 12px 16px 104px 16px;
+    }
+
+    @media @desktop {
+      margin-left: 32px;
+    }
+  }
+
+  .ant-form {
+    .ant-form-item {
+      .ant-form-item-label {
+        padding: 0;
+
+        label {
+          height: auto;
+        }
+      }
+
+      .ant-select-selector,
+      .ant-input,
+      .ant-picker,
+      .ant-picker-range,
+      .ant-checkbox-inner {
+        border-radius: 4px;
+      }
+    }
+
+    .ant-form-item-has-error {
+      .ant-select-selector,
+      .ant-input,
+      .ant-picker,
+      .ant-picker-range,
+      .ant-checkbox-inner {
+        border-color: @error-color;
+      }
+
+      .ant-radio-inner {
+        border-color: @error-color;
+      }
+
+      .ant-upload {
+        border-color: @error-color;
+      }
+    }
+  }
+}
+
+.ant-btn {
+  font-weight: bold;
+}
+
+.ant-form {
+  .ant-row {
+    .ant-pro-table-search-option {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .ant-row {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+
+  .ant-form-item {
+    .ant-form-item-label {
+      padding: 0;
+    }
+  }
+}
+
+.ant-tabs {
+  .ant-tabs-bar.ant-tabs-top-bar {
+    background-color: white;
+
+    .ant-tabs-tab {
+      padding: 16px;
+    }
+  }
+}
+
+.ant-pro-table-search {
+  .ant-form-item-label {
+    min-width: auto;
+  }
+  .ant-row:not(.ant-form-item) > .ant-col {
+    padding-left: 0px !important;
+  }
+}
+
+.ant-form-item-control-input-content {
+  a {
+    span {
+      display: none;
+    }
+  }
+}
+
+.ant-page-header-content {
+  padding-top: 0;
+}
+
+.ant-pro-basicLayout {
+  .ant-layout-header:not(.ant-pro-top-menu) {
+    background: @primary-color;
+
+    .ant-pro-global-header {
+      background: @primary-color;
+    }
+  }
+}
+
+.ant-pro-global-header {
+  .ant-pro-global-header-trigger {
+    .anticon-menu-unfold,
+    .anticon-menu-fold {
+      color: white;
+    }
+  }
+}
+
+.ant-pro-global-header-trigger:hover {
+  background: @primary-color;
+  .anticon-menu-fold,
+  .anticon-menu-unfold {
+    color: #fff;
+  }
+}
+
+.ant-table {
+  table {
+    thead {
+      tr {
+        th {
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+
+.ant-popover {
+  position: fixed !important;
+}
+
+.ant-popover-content {
+  .ant-popover-inner-content {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ant-pro-global-header {
+    .headerMenu {
+      display: none;
+    }
+  }
+}
+
+.ant-pro-table-alert .ant-alert-info {
+  background-color: @primary-color !important;
+  border: 1px solid @primary-color !important;
+}
+
+.ant-alert-message {
+  color: #fff !important;
+  font-weight: 700;
+}
+
+.ant-pro-table-alert .ant-alert-info .ant-alert-icon {
+  color: #fff !important;
+}
+
+.ant-pro-table {
+  z-index: unset !important;
+}
